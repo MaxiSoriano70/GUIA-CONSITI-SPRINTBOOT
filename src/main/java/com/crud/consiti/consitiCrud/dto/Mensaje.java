@@ -8,5 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Mensaje {
+
+    private String contenido;
+
+    // Constructor adicional, si prefieres tener un constructor con solo el mensaje
+    public Mensaje(String mensaje) {
+        this.contenido = mensaje;
+    }
 }
