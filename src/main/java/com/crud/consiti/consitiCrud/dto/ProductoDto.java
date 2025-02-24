@@ -19,4 +19,12 @@ public class ProductoDto {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Float getPrecio() {
+        return precio;
+    }
 }

@@ -7,7 +7,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class Mensaje {
 
@@ -16,5 +15,13 @@ public class Mensaje {
     // Constructor adicional, si prefieres tener un constructor con solo el mensaje
     public Mensaje(String mensaje) {
         this.contenido = mensaje;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
     }
 }
