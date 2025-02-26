@@ -53,6 +53,7 @@ public class AuthController {
             return new ResponseEntity<>(new Mensaje("El email " + nuevoUsuario.getEmail() + " ya se encuentra registrado"), HttpStatus.BAD_REQUEST);
         }
 
+
         Usuario usuario = new Usuario(
                 nuevoUsuario.getNombre(),
                 nuevoUsuario.getNombreUsuario(),
@@ -67,7 +68,7 @@ public class AuthController {
                 .orElseThrow(() -> new RuntimeException("Error: Rol USER no encontrado"));
         roles.add(rolUser);
 
-        if (nuevoUsuario.getRoles().contains("admin")) {
+        if (nuevoUsuario.getRoles() != null && nuevoUsuario.getRoles().contains("admin")) {
             Rol rolAdmin = rolService.getByRolNombre(ERolNombre.ROLE_ADMIN)
                     .orElseThrow(() -> new RuntimeException("Error: Rol ADMIN no encontrado"));
             roles.add(rolAdmin);

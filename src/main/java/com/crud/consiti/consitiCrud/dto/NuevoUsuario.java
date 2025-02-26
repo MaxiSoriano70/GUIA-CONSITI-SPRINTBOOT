@@ -10,8 +10,6 @@ import jakarta.validation.constraints.NotBlank;
 import java.util.HashSet;
 import java.util.Set;
 
-@Getter
-@Setter
 public class NuevoUsuario {
     @NotBlank
     private String nombre;
